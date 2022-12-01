@@ -30,7 +30,45 @@ const VideoPlayer = (videoElement) => {
     });
   };
 
+  const handleVideoProgress = (event) => {
+    const manualChange = Number(event.target.value);
+    videoElement.current.currentTime = (videoElement.current.duration / 100) * manualChange;
+    setPlayerState({
+      ...playerState,
+      progress: manualChange,
+    });
+  };
 
+  const handleVideoSpeed = (event) => {
+    const speed = Number(event.target.value);
+    videoElement.current.playbackRate = speed;
+    setPlayerState({
+      ...playerState,
+      speed,
+    });
+  } 
+
+  const toggleMute = () => {
+    setPlayerState({
+      ...playerState,
+      isMuted: !playerState.isMuted,
+    });
+  };
+
+  useEffect(() => {
+    playerState.isMuted
+    ? (videoElement.current.muted = true)
+    : (videoElement.current.muted = false);
+  }, [playerState.isMuted, videoElement]);
+
+  return {
+    playerState,
+    togglePlay,
+    handleOnTimeUpdate,
+    handleVideoProgress,
+    handleVideoSpeed,
+    toggleMute,
+  };
 };
 
 
