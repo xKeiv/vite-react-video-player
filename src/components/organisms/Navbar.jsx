@@ -5,12 +5,12 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo href="#">
-        Heph Video Player
+        Heff
       </Logo>
       <Menu>
         <Link href="#">About</Link>
         <Link href="#">Change</Link>
-        <Link href="#">GitHub</Link>
+        <Link href="https://github.com/xKeiv">GitHub</Link>
       </Menu>
     </Nav>
   )
@@ -22,6 +22,7 @@ const Nav = styled.div`
 padding: 0 2rem;
 
 display: flex;
+flex-direction: column;
 justify-content: space-between;
 align-items: center;
 flex-wrap: wrap;
