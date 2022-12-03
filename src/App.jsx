@@ -1,9 +1,12 @@
 import React, { useRef } from 'react'
-import './App.css'
-
+import './App.css';
 import Navbar from "./components/organisms/Navbar.jsx"
 
 import video from "./assets/video.mp4";
+import mute from "./assets/mute.svg"
+import unmute from "./assets/unmute.svg"
+import play from "./assets/play.svg"
+import pause from "./assets/pause.svg"
 import useVideoPlayer from "./components/organisms/VideoPlayer.jsx"
 
 const App = () => {
@@ -29,9 +32,9 @@ const App = () => {
           <div className="actions">
             <button onClick={togglePlay}>
               {!playerState.isPlaying ? (
-                <i className="">Play</i>
+                <img src={play} alt="Play" />
               ) : (
-                <i className="">Pause</i>
+                <img src={pause} alt="Pause" />
               )}
             </button>
           </div>
@@ -52,11 +55,11 @@ const App = () => {
             <option value="1.25">1.25x</option>
             <option value="2">2x</option>
           </select>
-          <button className="" onClick={toggleMute}>
+          <button onClick={toggleMute}>
             {!playerState.isMuted ? (
-              <i className="">Full</i>
+              <img src={unmute} alt="Unmute" />
             ) : (
-              <i className="">Mute</i>
+              <img src={mute} alt="Mute" />
             )}
           </button>
         </div>
