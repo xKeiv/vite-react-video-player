@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 
-const VideoPlayer = (videoElement) => {
+const useVideoPlayer = (videoElement) => {
+
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [speed, setSpeed] = useState(1);
+  const [muted, setMuted] = useState(false);
+
   const [playerState, setPlayerState] = useState({
-    isPlaying: false,
-    progress: 0,
-    speed: 1,
-    isMuted: false,
+    isPlaying: playing,
+    progress: progress,
+    speed: speed,
+    isMuted: muted,
   });
 
   const togglePlay = () => {
@@ -72,4 +78,4 @@ const VideoPlayer = (videoElement) => {
 };
 
 
-export default VideoPlayer
+export default useVideoPlayer
