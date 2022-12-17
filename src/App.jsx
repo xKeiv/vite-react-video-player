@@ -1,13 +1,12 @@
 import React from 'react'
-import './App.css';
+import Footer from "./components/organisms/Footer.jsx"
 import Navbar from "./components/organisms/Navbar.jsx"
 import VideoPlayer from "./components/molecules/VideoPlayer/VideoPlayer.jsx"
 
 const App = () => {
   return (
-    <div>
+    <div className="flex bg-[#3b3b3b]">
       <Navbar />
-      <VideoPlayer />
     </div>
   )
 }

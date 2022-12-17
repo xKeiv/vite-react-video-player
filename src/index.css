@@ -1,43 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   font-family: 'Red Hat Display', Arial, sans-serif;
-  font-size: 16px;
+  /* font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #252525;
-  background-color: #DCDADA;
+  color: #DCDADA;
+  background-color: #2c2c2c; */
 }
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-/* h1 {
-  color:3;
-} */
-
-/* button {
-  color:3;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
